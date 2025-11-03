@@ -1,16 +1,18 @@
-# Content Pipeline (uploads → transforms → CDN) — Native Backend (ZIG)
+# Content Pipeline (Web demo)
 
-This repo provides a **language-native backend** on port **5109**, with minimal **web** and **mobile** clients and a tiny **SDK**.
+**Stack:** HTML (static demo UI)  
+**API:** http://127.0.0.1:5510  
+**Web:** http://localhost:5510
 
-## Run
-See `api/README.md` for language-specific steps, then:
-- Web: open `web/index.html` via a static server
-- Mobile: `cd mobile && npm install && npm run start` (Android emulator uses `10.0.2.2:5109`)
+## Run (local)
 
-## Endpoints
-Project-specific routes are implemented in the backend (see `api/`). Try typical paths like:
-- `/api/kpis`, `/api/opps`, `/api/notes`
-- `/api/devices`, `/api/heartbeats`
-- `/api/resources`, `/api/availability`, `/api/book`
-- `/api/payments/create`, `/api/webhooks`
-- `/api/ingest`, `/api/dash/summary`
+### API
+(web only demo)
+
+### Web (static tester)
+cd content-pipeline-native/web && python3 -m http.server 5510
+
+## Test
+- **Ping:** curl -s http://127.0.0.1:5510 | jq .
+- Open the web tester and use your CDN/upload flow
+
