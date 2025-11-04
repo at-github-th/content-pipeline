@@ -1,18 +1,20 @@
 # Content Pipeline (Web demo)
 
-**Stack:** HTML (static demo UI)  
-**API:** http://127.0.0.1:5510  
-**Web:** http://localhost:5510
+Language: HTML (static demo UI)
 
-## Run (local)
+## How to run
 
-### API
+API
+```bash
 (web only demo)
+```
 
-### Web (static tester)
+Web
+```bash
 cd content-pipeline-native/web && python3 -m http.server 5510
+```
 
-## Test
-- **Ping:** curl -s http://127.0.0.1:5510 | jq .
-- Open the web tester and use your CDN/upload flow
+Open http://localhost:5510
 
+## Endpoints
+- Use the web tester for uploads/transforms/CDN
